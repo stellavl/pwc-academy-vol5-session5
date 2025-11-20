@@ -1,4 +1,4 @@
-# Git Workshop 123
+# Git Workshop 
 
 ## 1. What is Git?
 
