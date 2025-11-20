@@ -94,11 +94,26 @@ git reset HEAD~1               # Undo last commit (keep changes in working direc
 
 ### 4.5 Stash Changes
 Git stash lets you temporarily save your uncommitted changes.
+
+- **Save Changes**
 ```bash
-git stash                           # Save both staged and unstaged changes.
-git stash pop                       # Restore most recent stash
-git stash list                      # View all stashes
-git stash drop                      # Delete a stash
+git stash                 # Save all changes (staged and unstaged)
+git stash push <file>     # Save changes from a specific file only
+```
+
+- **View Stashes**
+```bash
+git stash list            # Show all stashes
+```
+
+- **Restore Changes**
+```bash
+git stash pop             # Restore the most recent stash and remove it from the stash list
+git stash apply           # Restore the most recent stash without removing it from the list
+```
+- **Delete Stashes**
+```bash
+git stash drop <stash>    # Delete a specific stash (e.g., stash@{0})
 ```
 
 ### 4.6 Commit vs Stash
